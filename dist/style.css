@@ -1,0 +1,96 @@
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  background-color: #ecf2f8;
+  margin: 0px;
+  padding: 0px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.container-grid {
+  height: 100vh;
+  width: 60vw;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+      grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
+}
+
+.container-grid > div {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.container-grid title {
+  font-weight: 600;
+}
+
+.circle {
+  float: left;
+}
+
+.card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: card1;
+  background-color: #7541c8;
+  color: white;
+}
+
+.card-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: card2;
+  background-color: #48556a;
+}
+
+.card-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card3;
+  background-color: white;
+}
+
+.card-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: card4;
+  background-color: #19212e;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+}
+
+.card-5 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: card5;
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */
