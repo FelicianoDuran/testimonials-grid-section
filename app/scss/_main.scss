@@ -27,12 +27,12 @@
 }
 .card-1{
     grid-area: card1;
-    background-color: hsl(263, 55%, 52%);
+    background-color: $moderate-violet;
     color: $white;
 }
 .card-2{
    grid-area: card2;
-   background-color: hsl(217, 19%, 35%);
+   background-color: $dark-grey-blue;
 }
 .card-3{
     grid-area: card3;
@@ -40,8 +40,7 @@
 }
 .card-4{
     grid-area: card4;
-    background-color: hsl(219, 29%, 14%);
-    grid-column: 2 / 4;
+    background-color: $dark-black-blue
 }
 .card-5{
     grid-area: card5;
