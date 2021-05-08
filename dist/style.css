@@ -38,21 +38,25 @@ body {
       grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
 }
 
-.container-grid > div {
+.card {
   border-radius: 10px;
   border: 1px solid black;
   padding: 2rem;
 }
 
-.container-grid title {
-  font-weight: 600;
+.card__image {
+  border-radius: 50%;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
 
-.circle {
-  float: left;
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.card-1 {
+#card1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -61,32 +65,29 @@ body {
   color: white;
 }
 
-.card-2 {
+#card2 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: card2;
   background-color: #48556a;
 }
 
-.card-3 {
+#card3 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: card3;
   background-color: white;
 }
 
-.card-4 {
+#card4 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: card4;
   background-color: #19212e;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / 4;
 }
 
-.card-5 {
+#card5 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;

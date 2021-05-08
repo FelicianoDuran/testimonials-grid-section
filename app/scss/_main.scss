@@ -9,40 +9,45 @@
     grid-template-columns: repeat(4 , 1fr);
     align-content: center;
     justify-content: center;
-
     gap: 2rem;
     grid-template-areas: "card1 card1 card2 card5"
                          "card3 card4 card4 card5";
 }
-.container-grid > div{
+.card{
     border-radius: 10px;
     border: 1px solid black;
-    padding: 2rem;    
+    padding: 2rem;
+
+&__image{
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-right: 1rem;
+}    
+
+&__header{
+    display: flex;
 }
-.container-grid  title{
-    font-weight: 600;
+
 }
-.circle{
-    float: left;
-}
-.card-1{
+
+#card1{
     grid-area: card1;
     background-color: $moderate-violet;
     color: $white;
 }
-.card-2{
+#card2{
    grid-area: card2;
    background-color: $dark-grey-blue;
 }
-.card-3{
+#card3{
     grid-area: card3;
     background-color: $white;
 }
-.card-4{
+#card4{
     grid-area: card4;
     background-color: $dark-black-blue
 }
-.card-5{
+#card5{
     grid-area: card5;
     background-color: $white;
 }
