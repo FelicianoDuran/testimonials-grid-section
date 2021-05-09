@@ -1,14 +1,14 @@
 * {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 13px;
   background-color: #ecf2f8;
-  margin: 0px;
-  padding: 0px;
 }
 
 .attribution {
@@ -40,20 +40,35 @@ body {
 
 .card {
   border-radius: 10px;
-  border: 1px solid black;
   padding: 2rem;
+  letter-spacing: 0.3px;
 }
 
 .card__image {
   border-radius: 50%;
-  height: 2.5rem;
+  height: 2.2rem;
   margin-right: 1rem;
+  border: 2px solid #d5c1f7;
 }
 
 .card__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 1rem;
+}
+
+.card__opacity50 {
+  opacity: 50%;
+}
+
+.card__opacity70 {
+  opacity: 70%;
+}
+
+.card__maintitle {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
 }
 
 #card1 {
@@ -70,6 +85,7 @@ body {
   -ms-grid-column: 3;
   grid-area: card2;
   background-color: #48556a;
+  color: white;
 }
 
 #card3 {

@@ -15,29 +15,41 @@
 }
 .card{
     border-radius: 10px;
-    border: 1px solid black;
     padding: 2rem;
-
-&__image{
-    border-radius: 50%;
-    height: 2.5rem;
-    margin-right: 1rem;
-}    
-
-&__header{
-    display: flex;
-}
-
+    letter-spacing: 0.3px;
+    
+    &__image{
+        border-radius: 50%;
+        height: 2.2rem;
+        margin-right: 1rem;
+        border: 2px solid #d5c1f7;
+    }    
+    &__header{
+        display: flex;
+        padding-bottom: 1rem;
+    }
+    &__opacity50{
+        opacity: 50%;
+    }
+    &__opacity70{
+        opacity: 70%;
+    }
+    &__maintitle{
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+    }
 }
 
 #card1{
     grid-area: card1;
     background-color: $moderate-violet;
     color: $white;
+    
 }
 #card2{
    grid-area: card2;
    background-color: $dark-grey-blue;
+   color: $white;
 }
 #card3{
     grid-area: card3;
