@@ -1,28 +1,59 @@
-.attribution { font-size: 11px; text-align: center; bottom: 0;}
+.attribution { font-size: 11px; text-align: center; bottom: 0; padding: 3rem;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@mixin borderColor($colorBorder) { 
+    border: 2px solid $colorBorder;
+}
 .container-grid{
-    height: 100vh;
-    width: 60vw;
     display: grid;
-    margin: auto;
-    grid-template-columns: repeat(4 , 1fr);
     align-content: center;
     justify-content: center;
+    margin: auto;
     gap: 2rem;
+    padding: 0 1rem;
+    padding-top: 50px;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5";
+}
+
+@media screen and (min-width: 768px) {
+  .container-grid {
+    padding: 0 3rem;
+    padding-top: 50px;
+    grid-template-columns: repeat(3, minmax(216px, 255px));
+    grid-template-rows: minmax(min-content, 282px) minmax(min-content, 262px) minmax(min-content, 232px);
+    grid-template-areas: "card1 card1 card2"
+                         "card3 card4 card4"
+                         "card5 card5 card5";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-grid {
+    grid-template-columns: repeat(4, 265px);
     grid-template-areas: "card1 card1 card2 card5"
                          "card3 card4 card4 card5";
+  }
+  .attribution{
+      padding: 0rem;
+  }
 }
+
+@media screen and (min-height: 810px) and (min-width: 1200px) {
+  .container-grid {
+    height: calc( 100vh - 77px);
+  }
+}
+
 .card{
     border-radius: 10px;
-    padding: 2rem;
+    padding: 2.5rem;
     letter-spacing: 0.3px;
     
     &__image{
         border-radius: 50%;
         height: 2.2rem;
         margin-right: 1rem;
-        border: 2px solid #d5c1f7;
     }    
     &__header{
         display: flex;
@@ -33,23 +64,46 @@
     }
     &__opacity70{
         opacity: 70%;
+        line-height: 1.5rem;
     }
     &__maintitle{
-        font-size: 1.3rem;
+        font-size: 1.55rem;
         padding-bottom: 1rem;
+        font-weight: 600;
+        position: relative;
     }
 }
-
 #card1{
+    position: relative;
     grid-area: card1;
     background-color: $moderate-violet;
     color: $white;
-    
-}
+    img.card__image{
+        @include borderColor(#d5c1f7);
+    }
+            &::before {
+            content: url(../app/images/bg-pattern-quotation.svg);
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            z-index: 0;
+
+            @media only screen and (min-width: 800px) {
+                right: 6rem;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                right: 7rem;
+            }
+        }
+    }
 #card2{
-   grid-area: card2;
-   background-color: $dark-grey-blue;
-   color: $white;
+    grid-area: card2;
+    background-color: $dark-grey-blue;
+    color: $white;
+    img{
+        @include borderColor($white);
+    }
 }
 #card3{
     grid-area: card3;
@@ -57,7 +111,11 @@
 }
 #card4{
     grid-area: card4;
-    background-color: $dark-black-blue
+    background-color: $dark-black-blue;
+    color: $white;
+    img{
+        @include borderColor($moderate-violet);
+    }
 }
 #card5{
     grid-area: card5;
