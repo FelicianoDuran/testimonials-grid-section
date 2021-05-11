@@ -51,7 +51,7 @@ html {
     -ms-grid-rows: minmax(min-content, 282px) minmax(min-content, 262px) minmax(min-content, 232px);
         grid-template-rows: minmax(-webkit-min-content, 282px) minmax(-webkit-min-content, 262px) minmax(-webkit-min-content, 232px);
         grid-template-rows: minmax(min-content, 282px) minmax(min-content, 262px) minmax(min-content, 232px);
-        grid-template-areas: "card1 card1 card2" "card3 card4 card4" "card5 card5 card5";
+        grid-template-areas: "card1 card1 card2" "card3 card4 card4" "card5 card5 card5";
   }
 }
 
@@ -59,7 +59,9 @@ html {
   .container-grid {
     -ms-grid-columns: (265px)[4];
         grid-template-columns: repeat(4, 265px);
-        grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
   }
   .attribution {
     padding: 0rem;
